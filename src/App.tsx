@@ -1,4 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
+import EnrollPage from './EnrollForm.jsx';
+import MentorshipFormPage from './MentorshipForm.jsx'; 
+import Calendar from 'react-calendar';
+import 'react-calendar/dist/Calendar.css';
+
 import {
     BookOpen,
     Code,
@@ -6,7 +11,7 @@ import {
     Users,
     Laptop,
     GraduationCap,
-    Calendar,
+    Calendar as CalendarIcon, 
     ArrowRight,
 } from 'lucide-react';
 import {
@@ -47,54 +52,179 @@ function ResourceCard({
   
 function CodingBootcampsPage() {
     return (
-        <div className="container mx-auto p-4">
-            <h1 className="text-3xl font-bold mb-4">Coding Bootcamps</h1>
-            <p>Learn more about our intensive coding bootcamps...</p>
-        </div>
+        <div className="min-h-screen bg-gradient-to-b from-purple-50 to-white">
+        <header className="container mx-auto px-4 py-16 text-center">
+                <h1 className="text-5xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-blue-600">
+                    Coding Bootcamps
+                </h1>
+                <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+                Our Coding Bootcamp provides immersive training in web development, data science, and mobile app development. Whether your goal is starting from scratch or looking to level up your skills, this program is designed to equip you with the knowledge you need to succeed in the tech industry.
+                </p>
+                <div className="flex justify-center gap-4">
+                    <p>Schedule: 
+
+                    <span className="text-purple-600 font-bold"> Monday - Friday, 9 AM - 5 PM</span>
+                    <br />
+                    Duration: <span className="text-purple-600 font-bold">12 weeks</span>
+                    <br />
+                    Start Date: <span className="text-purple-600 font-bold">Next one starts on 15th Jan 2024</span>
+                    <br />
+                    <br />
+                    <p className="text-gray-600">Ready to take the next step in your tech career? Join our Coding Bootcamp today!</p>
+                    <br />
+                    <button className="bg-purple-600 text-white px-8 py-3 rounded-full hover:bg-purple-700 transition">
+                        <Link to="/enroll" className="text-white-600 hover:text-white-700">Enroll Now</Link>
+                    </button>
+                    <br />
+                    <p className="text-gray-600 mt-4">For any inquiries or to schedule a call with our admissions team, please <Link to="/contact" className="text-purple-600 hover:text-purple-700">contact us</Link>.</p>
+                    <br />
+                    <p className="text-gray-600">Our team is here to support you every step of the way!</p>
+                    <br />
+                    <p className="text-gray-600">Join our community of learners and start your journey towards a successful career in tech!</p>
+                    <br />
+                    </p>
+                </div>
+            </header>
+            </div>
     );
 }
 
 function MentorshipPage() {
     return (
-        <div className="container mx-auto p-4">
-            <h1 className="text-3xl font-bold mb-4">Mentorship</h1>
-            <p>Discover how our mentors can guide you...</p>
-        </div>
+        <div className="min-h-screen bg-gradient-to-b from-purple-50 to-white">
+        <header className="container mx-auto px-4 py-16 text-center">
+                <h1 className="text-5xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-blue-600">
+                    Mentorships
+                </h1>
+                <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+                Our mentorship program connects aspiring tech professionals with experienced mentors from the industry. Whether you're looking for guidance on coding, career advice, or navigating the tech landscape, our mentors are here to support you. This program is designed to help you grow both personally and professionally in your tech journey.
+                </p>
+                <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
+                As a mentee, you'll have the opportunity to work one-on-one with a mentor who can provide personalized guidance and support. Our mentors come from diverse backgrounds and have a wealth of experience in various tech fields, including software development, data science, UX/UI design, and more.
+                </p>
+                <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
+                The mentorship program is flexible and can be tailored to your specific needs and goals. Whether you're looking for help with a specific project, preparing for technical interviews, or seeking advice on career advancement, our mentors are committed to helping you succeed.
+                </p>
+                <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
+                To get started, simply fill out our mentorship application form, and we'll match you with a mentor based on your interests and goals. We also encourage mentors to share their own experiences and insights to help mentees navigate the tech industry more effectively.
+                </p>
+                <button className="bg-purple-600 text-white px-8 py-3 rounded-full hover:bg-purple-700 transition">
+                        <Link to="/mentorshipForm" className="text-white-600 hover:text-white-700">Apply Now</Link>
+                </button>
+                <div className="flex justify-center gap-4">
+                    <p>Join our mentorship program today and start your journey towards a successful tech career!</p>
+                </div>
+            </header>
+            </div>
     );
 }
 
 function HealthWellnessPage() {
     return (
-        <div className="container mx-auto p-4">
-            <h1 className="text-3xl font-bold mb-4">Health & Wellness</h1>
-            <p>Check out our wellness programs and mental health support.</p>
+        <div className="min-h-screen bg-gradient-to-b from-purple-50 to-white">
+            <header className="container mx-auto px-4 py-16 text-center">
+                <h1 className="text-5xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-blue-600">
+                    Mentorships
+                </h1>
+                <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+                    At TechUnity, we understand that mental health and wellness are crucial for success in the tech industry. Our Health & Wellness program is designed to provide support and resources to help you maintain a healthy work-life balance. We offer access to mental health resources, wellness workshops, and a supportive community to help you thrive both personally and professionally.
+                </p>                 
+                    <p className="text-gray-600">Our team is here to support you every step of the way!</p>
+                  
+                    <p className="text-gray-600">Join our community of learners and start your journey towards a successful career in tech!</p>
+                  
+                
+                <div className="mt-10 mx-auto max-w-md '"> 
+                <iframe
+                    title="Online Heart Rate Monitor"
+                    src="https://onlineheartrate.com/"
+                    width="200%"
+                    height="400"  
+                    style={{ border: '1px solid #ccc', borderRadius: '8px', overflow: 'hidden', marginLeft: '-230px' }}
+                ></iframe>
+              </div>
+            </header>
         </div>
     );
 }
 
+
 function ScholarshipsPage() {
     return (
-        <div className="container mx-auto p-4">
-            <h1 className="text-3xl font-bold mb-4">Scholarships</h1>
-            <p>Learn about financial support opportunities...</p>
-        </div>
+        <div className="min-h-screen bg-gradient-to-b from-purple-50 to-white">
+        <header className="container mx-auto px-4 py-16 text-center">
+                <h1 className="text-5xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-blue-600">
+                    Scholorships
+                </h1>
+                <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+                Our Scholarships program provides financial support to individuals from underrepresented backgrounds who are pursuing careers in tech. We understand that the cost of education can be a barrier, and we are committed to helping you achieve your goals. Scholarships are available for various tech-related courses, certifications, and degree programs.
+                </p>
+                <div className="flex justify-center gap-4">
+                    <p>Join our mentorship program today and start your journey towards a successful tech career!</p>
+                </div>
+            </header>
+            </div>
     );
 }
 
 function TechEquipmentPage() {
     return (
-        <div className="container mx-auto p-4">
-            <h1 className="text-3xl font-bold mb-4">Tech Equipment</h1>
-            <p>Discover how you can get access to essential tech equipment</p>
-        </div>
+        <div className="min-h-screen bg-gradient-to-b from-purple-50 to-white">
+        <header className="container mx-auto px-4 py-16 text-center">
+                <h1 className="text-5xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-blue-600">
+                    Tech Equipment
+                </h1>
+                <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+                Access to the right tech equipment is essential for success in the tech industry. Our Tech Equipment program provides laptops and other essential tech tools to individuals from underrepresented backgrounds. We aim to ensure that everyone has the resources they need to thrive in their tech careers, regardless of their financial situation.
+                </p>
+                <div className="flex justify-center gap-4">
+                    <p>Through this program, we provide:</p>
+                </div>
+                <div className="relative">
+    <ul className="list-disc text-left mx-auto max-w-md mt-4" style={{ transform: 'translateX(110px)' }}>
+        <li>Laptops for coding and development</li>
+        <li>Software licenses for essential tools</li>
+        <li>Access to online learning platforms</li>
+        <li>Technical support and resources</li>
+    </ul>
+</div>
+                <div className="mt-10">
+                    <p className="text-gray-600">To apply for tech equipment support, please contact our team for more information.</p>
+                </div>
+            </header>
+            </div>
     );
 }
 
 function EventsPage() {
+    const [date, setDate] = useState(new Date()); 
+
+     const onChange = (date) => {
+         setDate(date);
+     };
+    
     return (
-        <div className="container mx-auto p-4">
-            <h1 className="text-3xl font-bold mb-4">Events</h1>
-            <p>Discover upcoming networking events and workshops.</p>
+        <div className="min-h-screen bg-gradient-to-b from-purple-50 to-white">
+            <header className="container mx-auto px-4 py-16 text-center">
+                <h1 className="text-5xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-blue-600">
+                    Events
+                </h1>
+                <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+                    At TechUnity, we host a variety of events throughout the year to foster community engagement and support. Our events include networking opportunities, workshops, career fairs, and panel discussions focused on diversity in tech. These events are designed to connect you with industry professionals, provide valuable insights, and help you build a strong network within the tech community.
+                </p>
+                <div className="flex justify-center gap-4">
+                    <p>Events are available for various tech-related courses, certifications, and degree programs. They are also open to all individuals from underrepresented backgrounds who are pursuing careers in tech.</p>
+                </div>
+                <div className="mt-8 flex justify-center">
+                    <Calendar 
+                        onChange={onChange}
+                        value={date}
+                    />
+                 </div>
+                <div className="text-center mt-4">
+                     <p>Selected date: {date.toDateString()}</p>
+                </div>
+            </header>
         </div>
     );
 }
@@ -146,7 +276,8 @@ function Layout() {
                         icon={BookOpen}
                         title="Scholarships"
                         description="Financial support for education and certification programs."
-                        link="/scholarships"
+                        link="https://www.fastweb.com/ppc?utm_source=bing&utm_medium=ppc&ESRC=fw_msn.kw&msclkid=256c42ac525c17ee8a392544721d9285"
+                        isExternal={true}
                     />
                     <ResourceCard
                         icon={Laptop}
@@ -155,7 +286,7 @@ function Layout() {
                         link="/tech-equipment"
                     />
                     <ResourceCard
-                        icon={Calendar}
+                        icon={CalendarIcon}
                         title="Events"
                         description="Networking events, workshops, and career fairs focused on diversity in tech."
                         link="/events"
@@ -238,6 +369,8 @@ function App() {
                 <Route path="/scholarships" element={<ScholarshipsPage />} />
                 <Route path="/tech-equipment" element={<TechEquipmentPage />} />
                 <Route path="/events" element={<EventsPage />} />
+                <Route path="/enroll" element={<EnrollPage />} /> 
+                <Route path="/mentorshipForm" element={<MentorshipFormPage />} /> 
             </Routes>
         </Router>
     );
