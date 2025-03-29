@@ -44,7 +44,7 @@ function ResourceCard({
         </div>
     );
 }
-
+  
 function CodingBootcampsPage() {
     return (
         <div className="container mx-auto p-4">
